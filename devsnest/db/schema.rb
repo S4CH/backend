@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_01_184421) do
+ActiveRecord::Schema.define(version: 2021_02_24_123155) do
 
   create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "unique_id"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 2021_02_01_184421) do
     t.integer "role"
     t.integer "score"
     t.decimal "percent_complete", precision: 10
-    t.string "uid"
+    t.string "discord_uid"
     t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

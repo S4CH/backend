@@ -4,7 +4,7 @@ module Api
   module V1
     class UsersController < ApplicationController
       include JSONAPI::ActsAsResourceController
-      #before_action :discord_authorize, except: [:update]
+      # before_action :discord_authorize, except: [:update]
 
       def report
         discord_id = params[:discord_id]
@@ -19,10 +19,15 @@ module Api
 
       def leaderboard
         page = params[:page].to_i
-        offset = (page - 1)* 10
+        offset = (page - 1) * 10
         scoreboard = User.order(score: :desc).limit(10).offset(offset)
-        pages_count = User.count%10 == 0? User.count/10 : User.count/10 + 1
+        pages_count = (User.count % 10).zero? ? User.count / 10 : User.count / 10 + 1
         render json: { scoreboard: scoreboard, count: pages_count }
+      end
+
+      def log_out
+        reset_session
+        render json: { notice: 'You logged out successfuly' }
       end
     end
   end

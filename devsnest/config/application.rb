@@ -38,5 +38,7 @@ module Devsnest
     config.session_store :cookie_store, key: '_interslice_session'
     config.middleware.use ActionDispatch::Cookies # Required for all session management
     config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
+    # Rails.application.config.session_store :disabled
+    # config.middleware.delete ActionDispatch::Session::CookieStore
   end
 end

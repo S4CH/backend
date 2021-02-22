@@ -5,7 +5,6 @@ module Api
     class WriteupsController < ApplicationController
       include JSONAPI::ActsAsResourceController
       before_action :params_change, only: :create
-      before_action :discord_authorize
 
       def params_change
         discord_id = params['data']['attributes']['discord_id']

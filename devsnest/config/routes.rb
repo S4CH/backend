@@ -10,14 +10,14 @@ Rails.application.routes.draw do
              },
              controllers: {
                registrations: 'registrations',
-               omniauth_callbacks: "omniauth_callbacks"
+               omniauth_callbacks: 'omniauth_callbacks'
              }
 
   namespace :api do
     namespace :v1 do
       jsonapi_resources :users do
         collection do
-          get :report, :leaderboard
+          get :report, :leaderboard, :log_out
         end
       end
       jsonapi_resources :users

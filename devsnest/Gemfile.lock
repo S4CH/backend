@@ -132,6 +132,9 @@ GEM
     omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
+    omniauth-discord (1.0.0)
+      omniauth
+      omniauth-oauth2
     omniauth-google-oauth2 (0.8.1)
       jwt (>= 2.0)
       oauth2 (~> 1.1)
@@ -261,15 +264,16 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
-  devise
+  devise (~> 4.7.3)
   dotenv (~> 2.7, >= 2.7.6)
   jsonapi-resources (~> 0.10.2)
   listen (~> 3.2)
   mysql2 (~> 0.5.2)
   omniauth (~> 1.9.1)
+  omniauth-discord (~> 1.0.0)
   omniauth-google-oauth2
   puma (~> 4.1)
-  rack-cors
+  rack-cors (~> 1.1.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   redis
   redis-namespace
