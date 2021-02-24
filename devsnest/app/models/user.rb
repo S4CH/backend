@@ -11,7 +11,7 @@ class User < ApplicationRecord
     user = User.where(discord_id: discord_hash.uid).first
 
     if user.present?
-      user.update(email: email, provider: discord_hash.provider) if user.email != email
+      user.update(email: email, provider: discord_hash.provider, web_active: true) if user.email != email
       return user
     end
 
@@ -21,7 +21,8 @@ class User < ApplicationRecord
       email: email,
       discord_id: discord_hash.uid,
       provider: discord_hash.provider,
-      password: Devise.friendly_token[0, 20]
+      password: Devise.friendly_token[0, 20],
+      web_active: true
     )
   end
 end
