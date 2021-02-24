@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::API
   include ApiRenderConcern
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+  before_action :validate_bot_user
   def render_resource(resource)
     if resource.errors.empty?
       render json: resource
@@ -25,6 +25,25 @@ class ApplicationController < ActionController::API
     }, status: :bad_request
   end
 
+  def validate_bot_user
+    @bot = request.headers["Authorization"] == ENV['DISCORD_TOKEN'] && request.headers["User-Type"] == 'Bot'
+    return true
+  end
+
+  def user_auth
+    return true if current_user.present?
+    render_forbidden
+  end
+
+  def bot_auth
+    return true if @bot.present?
+    render_forbidden
+  end
+
+  def simple_auth
+    return true if @bot.present? || current_user.present?
+    render_forbidden
+  end
   protected
 
   def configure_permitted_parameters

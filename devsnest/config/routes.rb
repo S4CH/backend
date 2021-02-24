@@ -13,10 +13,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      jsonapi_resources :users do
+      jsonapi_resources :users, only: %i[index show update create] do
         collection do
           get :report, :leaderboard
           delete :log_out
+          put :left_discord
         end
       end
       jsonapi_resources :contents, only: %i[index show]
