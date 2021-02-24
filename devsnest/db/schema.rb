@@ -100,23 +100,10 @@ ActiveRecord::Schema.define(version: 2021_02_24_123155) do
     t.boolean "active"
     t.integer "role"
     t.integer "score"
-    t.decimal "percent_complete", precision: 10
     t.string "discord_uid"
     t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "views", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_views_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
   end
 
   create_table "writeups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

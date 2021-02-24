@@ -3,8 +3,9 @@
 # This is oauth controller to handle discord_login
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  # redirect user not to root but to a specific page
   def discord
-    user = User.find_for_discord(request.env['omniauth.auth'], current_user)
+    user = User.find_for_discord(request.env['omniauth.auth'])
     if user.persisted?
       sign_in_and_redirect user, event: :authentication
     else
