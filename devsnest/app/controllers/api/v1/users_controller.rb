@@ -4,7 +4,6 @@ module Api
   module V1
     class UsersController < ApplicationController
       include JSONAPI::ActsAsResourceController
-      # before_action :discord_authorize, except: [:update]
 
       def report
         discord_id = params[:discord_id]
