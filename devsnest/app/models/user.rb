@@ -8,7 +8,7 @@ class User < ApplicationRecord
   def self.find_for_discord(discord_hash)
     email = discord_hash.info['email'] || discord_hash.extra.raw_info.email
     username = discord_hash.extra.raw_info.username
-    user = User.where(discord_uid: discord_hash.uid).first
+    user = User.where(discord_id: discord_hash.uid).first
 
     if user.present?
       user.update(email: email, provider: discord_hash.provider) if user.email != email
@@ -19,7 +19,7 @@ class User < ApplicationRecord
       name: discord_hash.info['name'],
       username: username,
       email: email,
-      discord_uid: discord_hash.uid,
+      discord_id: discord_hash.uid,
       provider: discord_hash.provider,
       password: Devise.friendly_token[0, 20]
     )
