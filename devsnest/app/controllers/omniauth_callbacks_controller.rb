@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This is oauth controller to handle discord_login
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
