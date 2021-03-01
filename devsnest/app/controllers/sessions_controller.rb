@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < Devise::SessionsController
+class SessionsController < Devise::SessionsController
   respond_to :json
 
   private

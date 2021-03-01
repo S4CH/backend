@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       devise_for :users, skip:[:registrations],
                  controllers: {
                    #omniauth_callbacks: 'api/v1/omniauth_callbacks',
-                          sessions: 'api/v1/sessions',
+                          sessions: 'sessions',
                           registrations: 'api/v1/registrations'
                  }
       jsonapi_resources :users, only: %i[index show update create] do

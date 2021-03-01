@@ -2,9 +2,9 @@
 
 class ApplicationController < ActionController::API
   include ApiRenderConcern
-  before_action :set_current_user
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :validate_bot_user
+   before_action :set_current_user
+  # before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :validate_bot_user
   def render_resource(resource)
     if resource.errors.empty?
       render json: resource
