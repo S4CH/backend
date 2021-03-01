@@ -4,9 +4,9 @@ module Api
   module V1
     class UsersController < ApplicationController
       include JSONAPI::ActsAsResourceController
-      before_action :simple_auth, only: %i[leaderboard report show]
-      before_action :bot_auth, only: %i[left_discord create index]
-      before_action :user_auth, only: [:log_out, :me]
+      # before_action :simple_auth, only: %i[leaderboard report show]
+      # before_action :bot_auth, only: %i[left_discord create index]
+      # before_action :user_auth, only: [:log_out, :me]
 
       def me
         render_success(@current_user.as_json.merge({ "type": 'users' }))
@@ -35,16 +35,16 @@ module Api
         render json: { notice: 'You logged out successfuly' }
       end
 
-      def create
-        discord_id = params['data']['attributes']['discord_id']
-        user = User.find_by(discord_id: discord_id)
-        if user
-          user.discord_active = true
-          user.save
-          return render_success(user.as_json.merge({ "type": 'users', status: 'status updated' }))
-        end
-        super
-      end
+      # def create
+      #   discord_id = params['data']['attributes']['discord_id']
+      #   user = User.find_by(discord_id: discord_id)
+      #   if user
+      #     user.discord_active = true
+      #     user.save
+      #     return render_success(user.as_json.merge({ "type": 'users', status: 'status updated' }))
+      #   end
+      #   super
+      # end
 
       def left_discord
         discord_id = params['data']['attributes']['discord_id']
@@ -53,6 +53,18 @@ module Api
         user.save
         render_success(user.as_json.merge({ "type": 'users', status: 'status updated' }))
       end
+
+        def custom
+        email = params['user']['email']
+        byebug
+        user = User.find_by(email: email)
+        if user
+          sign_in(user)
+        else
+          return render_forbidden
+        end
+      end
+
     end
   end
 end

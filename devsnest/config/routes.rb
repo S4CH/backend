@@ -6,11 +6,14 @@ Rails.application.routes.draw do
     namespace :v1 do
       devise_for :users, skip:[:registrations],
                  controllers: {
-                   omniauth_callbacks: 'api/v1/omniauth_callbacks'
+                   #omniauth_callbacks: 'api/v1/omniauth_callbacks',
+                          sessions: 'api/v1/sessions',
+                          registrations: 'api/v1/registrations'
                  }
       jsonapi_resources :users, only: %i[index show update create] do
         collection do
           get :report, :leaderboard, :me
+          post :custom
           delete :log_out
           put :left_discord
         end
