@@ -4,6 +4,7 @@ module Api
   module V1
     class UsersController < ApplicationController
       include JSONAPI::ActsAsResourceController
+      before_action :authenticate_api_v1_user!
       # before_action :simple_auth, only: %i[leaderboard report show]
       # before_action :bot_auth, only: %i[left_discord create index]
       # before_action :user_auth, only: [:log_out, :me]
@@ -23,6 +24,7 @@ module Api
       end
 
       def leaderboard
+        byebug
         page = params[:page].to_i
         offset = [(page - 1) * 10, 0].max
         scoreboard = User.order(score: :desc).limit(10).offset(offset)
@@ -60,6 +62,7 @@ module Api
         user = User.find_by(email: email)
         if user
           sign_in(user)
+          render json: {}
         else
           return render_forbidden
         end
