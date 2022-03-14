@@ -3,22 +3,65 @@
 module Api
   module V1
     class UserResource < JSONAPI::Resource
-      attributes :email, :name, :password, :discord_id, :web_active, :username, :score, :discord_active
-      attributes :group_id
+      attributes :email, :name, :password, :web_active, :username, :score, :discord_active, :batch, :grad_status, :grad_specialization, :grad_year, :grad_start, :grad_end,
+                 :github_url, :linkedin_url, :resume_url, :dob, :registration_num, :college_id, :image_url, :google_id, :bot_token, :update_count, :login_count, :discord_id, :is_verified
+      attributes :group_id, :group_name
+      attributes :college_name
+      attributes :solved, :total_by_difficulty
+      attributes :activity
+      attributes :discord_username, :school, :work_exp, :known_from, :dsa_skill, :webd_skill, :is_discord_form_filled
+      attributes :frontend_activity
+      attributes :markdown, :bio
+      attributes :type
+
+      def markdown
+        @model.markdown.dup.encode('ISO-8859-1').force_encoding('utf-8') unless @model.markdown.blank?
+      end
 
       def fetchable_fields
-        if context[:user].nil? || context[:user].id == @model.id
-          super - [:password]
-        else
-          super - [:password, :email]
-        end
+        context[:user].nil? || context[:user].id == @model.id ? super - %i[password] : super - %i[password email]
+      end
+
+      def self.updatable_fields(context)
+        super - %i[score group_id group_name discord_id password college_name]
       end
 
       def group_id
         return nil if context[:user].nil?
 
-        member = GroupMembers.where(user_id: context[:user].id).first
+        member = GroupMember.where(user_id: context[:user].id).first
         member.present? ? member.group_id : nil
+      end
+
+      def group_name
+        member = GroupMember.where(user_id: @model.id).first
+        member.present? ? member.group.name : nil
+      end
+
+      def college_name
+        @model.college.nil? ? nil : @model.college.name
+      end
+
+      def solved
+        Challenge.count_solved(@model.id)
+      end
+
+      def total_by_difficulty
+        Challenge.split_by_difficulty
+      end
+
+      def activity
+        @model.activity
+      end
+
+      def frontend_activity
+        FrontendSubmission.where(user_id: @model.id).group('DATE(updated_at)').count
+      end
+
+      def type
+        return nil unless @model.user_type != 1
+
+        @model.user_type
       end
     end
   end

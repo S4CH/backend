@@ -1,0 +1,22 @@
+plugins:
+  rubocop:
+    enabled: true
+    channel: rubocop-1-10-0
+    # config:
+    #   file: ".rubocop-codeclimate.yml"
+    checks:
+      Rubocop/Style/CaseLikeIf:
+        enabled: false
+
+      Rubocop/Style/StringConcatenation:
+        enabled: false
+
+      Rubocop/Metrics/ClassLength:
+        enabled: false
+   
+
+exclude_patterns:
+  - "devsnest/db/schema.rb"
+  - "devsnest/lib/tasks/youtube.rake"
+  - "devsnest/lib/tasks/frontend.rake"
+

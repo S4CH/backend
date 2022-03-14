@@ -43,7 +43,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   config.log_tags = [:request_id]
@@ -55,7 +55,25 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "devsnest_production"
 
-  config.action_mailer.perform_caching = false
+  config.active_job.queue_adapter = :sidekiq
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   location: '/usr/sbin/sendmail',
+  #   arguments: '-i'
+  # }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = { from: 'Devsnest <no-reply@devsnest.in>' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'email-smtp.ap-south-1.amazonaws.com',
+    port: 587,
+    user_name: ENV['SES_SMTP_USERNAME'],
+    password: ENV['SES_SMTP_PASSWORD'],
+    authentication: :login,
+    enable_starttls_auto: true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -70,7 +88,6 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -104,7 +121,10 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  config.hosts << "devsnest.in"
-  config.hosts << "api.devsnest.in"
-  config.hosts << "devsnest-frontend.vercel.app"
+  config.hosts << 'devsnest.in'
+  config.hosts << 'api.devsnest.in'
+  config.hosts << 'api.harry.devsnest.in'
+  config.hosts << 'api.ron.devsnest.in'
+  config.hosts << 'api.hermione.devsnest.in'
+  config.hosts << 'old.devsnest.in'
 end

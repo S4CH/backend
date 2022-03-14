@@ -1,0 +1,1944 @@
+topic,difficulty,name,question_body
+arrays,easy,Best Time to Buy and Sell Stock,"You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the maximum profit you can make from a single buy and sell transaction.
+
+### Example 1:
+```txt
+Input:
+    6
+    7 1 5 3 6 4
+Output:
+    5
+Explanation:
+    Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+    Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+```
+
+### Example 2:
+```txt
+Input:
+    5
+    7 6 4 3 1
+Output:
+    0
+Explanation:
+    In this case, no transactions are done and the max profit = 0.
+```
+
+#### Constraints:
+- 1 <= prices.length <= 100000
+- 0 <= prices[i] <= 10000"
+arrays,medium,Maximum Product Subarray,"Given an array Arr[] that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the product of the maximum product subarray.
+
+### Example 1:
+```txt
+Input:
+    5
+    6 -3 -10 0 2
+Output:
+    180
+Explanation:
+    Subarray with maximum product
+    is [6, -3, -10] which gives product as 180.
+```
+### Example 2:
+```txt
+Input:
+    6
+    2 3 4 5 -1 0
+Output:
+    120
+Explanation:
+    Explanation: Subarray with maximum product
+    is [2, 3, 4, 5] which gives product as 120.
+```
+
+
+#### Constraints:
+- 1 ≤ N ≤ 500
+- -100 ≤ Arr[i] ≤ 100
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(1)"
+arrays,medium,Majority Element II,"Given an array of positive and negative numbers, arrange them in an alternate fashion such that every positive number is followed by negative and vice-versa maintaining the order of appearance.
+Number of positive and negative numbers need not be equal. If there are more positive numbers they appear at the end of the array. If there are more negative numbers, they too appear in the end of the array.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the arranged array elements.
+
+### Example 1:
+```txt
+Input:
+    6
+    1  2  3  -4  -1  4
+Output:
+    -4  1  -1  2  3  4
+```
+
+### Example 2:
+```txt
+Input:
+    10
+    -5 -2 5 2 4 7 1 8 0 -8
+Output:
+    -5 5 -2 2 -8 4 7 1 8 0
+```
+
+#### Constraints:
+- 1 ≤ N ≤ 1000000
+- -100000 ≤ A[i] ≤100000"
+arrays,medium,Triplet Sum in Array,"Given an array arr of size n and an integer X. Find if there's a triplet in the array which sums up to the given integer X.
+
+### Input Format
+
+First line contains N Q, number of elements in the array and the target number.
+Second line contains N numbers, elements of the array.
+
+### Output Format
+
+Print 1 if there's a triplet in the array which sums up to the given integer X. Otherwise, print 0.
+
+### Example 1:
+```txt
+Input:
+    6 13
+    1 4 45 6 10 8
+Output:
+    1
+Explanation:
+    The triplet {1, 4, 8} in the array sums up to 13.
+```
+
+### Example 2:
+```txt
+Input:
+    5 10
+    1 2 4 3 6
+Output:
+    1
+Explanation:
+    The triplet {1, 3, 6} in the array sums up to 10.
+```
+
+
+
+#### Constraints:
+- 1 ≤ n ≤ 1000
+- 1 ≤ A[i] ≤ 100000
+- Expected Time Complexity: O(n2)
+- Expected Auxiliary Space: O(1)"
+arrays,easy,reverse an array,"Given an array (or string), the task is to reverse the array/string.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the reversed array elements.
+
+### Example 1:
+```txt
+Input:
+    3
+    1 2 3
+Output:
+    3 2 1
+```
+
+### Example 2:
+```txt
+Input:
+    3
+    4 5 1 2
+Output:
+    2 1 5 4
+```
+#### Constraints:
+- 1 ≤ N ≤ 1000000
+- 1 ≤ A[i] ≤100000"
+greedy,easy,N meetings in one room,"There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i.
+What is the maximum number of meetings that can be accommodated in the meeting room when only one meeting can be held in the meeting room at a particular time?
+
+**Note** : Start time of one chosen meeting can't be equal to the end time of the other chosen meeting.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a and b.
+The second line contains n integers a1, a2, ... the array elements themselves, denoting the start time of the meeting.
+The third line contains n integers b1, b2, ... the array elements themselves, denoting the end time of the meeting.
+
+### Output Format
+
+Print the number of meetings that can be accommodated in the meeting room.
+
+### Example 1:
+```txt
+Input:
+    6
+    1 3 0 5 8 5
+    2 4 6 7 9 9
+Output:
+    4
+Explanation:
+    Maximum four meetings can be held with
+    given start and end timings.
+    The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
+```
+
+### Example 2:
+```txt
+Input:
+    3
+    10 12 20
+    20 25 30
+Output:
+    1
+Explanation:
+    Only one meetings can be held
+    with given start and end timings.
+
+```
+
+
+#### Constraints:
+- 1 ≤ N ≤ 100000
+- 0 ≤ start[i] < end[i] ≤ 100000
+- Expected Time Complexity : O(N*LogN)
+- Expected Auxilliary Space : O(N)"
+greedy,medium,Remove K Digits,"Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
+
+### Input Format
+
+The first line contains an integer k , maximum amount of digits to be removed from the number.
+The second line contains a non-negative integer num.
+
+### Output Format
+
+Print the smallest possible integer after removing k digits from num.
+
+### Example 1:
+```txt
+Input:
+    3
+    1432219
+Output:
+    1219
+Explanation:
+    Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
+```
+
+### Example 2:
+```txt
+Input:
+    1
+    10200
+Output:
+    200
+Explanation:
+    Remove the leading 1 and the number is 200. Note that the output must not contain leading zeroes.
+```
+
+### Example 3:
+```txt
+Input:
+    2
+    10
+Output:
+    0
+Explanation:
+    Remove all the digits from the number and it is left with nothing which is 0.
+```
+
+#### Constraints:
+- 1 <= k <= num.length <= 100000
+- num consists of only digits.
+- num does not have any leading zeros except for the zero itself."
+greedy,medium,Fractional Knapsack,"Given weights and values of N items, we need to put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
+
+**Note** : Unlike 0/1 knapsack, you are allowed to break the item.
+
+### Input Format
+
+The first line contains integers N and W, N being the length of the original array a, W being the capacity of the knapsack.
+The second line contains n integers a1, a2, ... the array elements themselves, denoting the values of the items.
+The second line contains n integers a1, a2, ... the array elements themselves, denoting the weight of the items.
+
+### Output Format
+
+Print a double value representing the maximum value in knapsack.
+
+### Example 1:
+```txt
+Input:
+    3 50
+    60 100 120
+    10 20 30
+Output:
+    240.00
+Explanation:
+    Explanation:Total maximum value of item
+    we can have is 240.00 from the given
+    capacity of sack.
+
+```
+### Example 2:
+```txt
+Input:
+    2 50
+    60 100
+    10 20
+Output:
+    160.00
+Explanation:
+    Total maximum value of item
+    we can have is 160.00 from the given
+    capacity of sack.
+```
+
+
+#### Constraints:
+- 1 <= N <= 100000
+- 1 <= W <= 100000
+- Expected Time Complexity : O(NlogN)
+- Expected Auxilliary Space: O(1)
+"
+greedy,easy,Chocolate Distribution Problem ,"Given an array A[ ] of positive integers of size N, where each value represents the number of chocolates in a packet. Each packet can have a variable number of chocolates. There are M students, the task is to distribute chocolate packets among M students such that :
+1. Each student gets exactly one packet.
+2. The difference between maximum number of chocolates given to a student and minimum number of chocolates given to a student is minimum.
+
+### Input Format
+
+The first line contains an integer N and M, N represents the number of chocolate packets and M represents the number of students.
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the minimum possible difference between maximum number of chocolates given to a student and minimum number of chocolates given to a student.
+
+### Example 1:
+```txt
+Input:
+    8 5
+    3 4 1 9 56 7 9 12
+Output:
+    6
+Explanation:
+    The minimum difference between
+    maximum chocolates and minimum chocolates
+    is 9 - 3 = 6 by choosing following M packets :
+    {3, 4, 9, 7, 9}.
+
+```
+
+### Example 2:
+```txt
+Input:
+    7 3
+    7 3 2 4 9 12 56
+Output:
+    2
+Explanation:
+    The minimum difference between
+    maximum chocolates and minimum chocolates
+    is 4 - 2 = 2 by choosing following M packets :
+    {3, 2, 4}.
+```
+
+
+#### Constraints:
+- 1 ≤ T ≤ 100
+- 1 ≤ N ≤ 100000
+- 1 ≤ A[i] ≤ 1000000000
+- 1 ≤ M ≤ N
+- Expected Time Complexity: O(N*Log(N))
+- Expected Auxiliary Space: O(1)"
+greedy,easy,Maximize sum,"Given an array A of N integers. Your task is to write a program to find the maximum value of ∑arr[i]*i, where i = 0, 1, 2,…., n – 1.
+You are allowed to rearrange the elements of the array.
+
+**Note** : Since output could be large, hence module 109+7 and then print answer.
+
+### Input Format
+
+The first line contains an integer N the length of the original array A
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the maximum value of an array.
+
+### Example 1:
+```txt
+Input:
+    5
+    5 3 2 4 1
+Output:
+    40
+Explanation:
+    If we arrange the array as 1 2 3 4 5 then
+    we can see that the minimum index will multiply
+    with minimum number and maximum index will
+    multiply with maximum number.
+```
+
+```
+So 1*0+2*1+3*2+4*3+5*4=0+2+6+12+20 = 40 mod(109+7) = 40
+```
+
+### Example 2:
+```txt
+Input:
+    3
+    1 2 3
+Output:
+    8
+```
+
+
+#### Constraints:
+- 1 ≤ N ≤ 10000000
+- 1 ≤ Ai ≤ N
+- Expected Time Complexity: O(nlog(n)).
+- Expected Auxiliary Space: O(1)."
+backtracking,easy,Permutations of a given string,"Given a string S. The task is to print all permutations of a given string in lexicographical order.
+
+### Input Format
+
+The problem takes a string S as an input parameter.
+
+### Output Format
+
+Print the lexicographically sorted permutations of the string S.
+
+### Example 1:
+```txt
+Input:
+    ABC
+Output:
+    ABC ACB BAC BCA CAB CBA
+Explanation:
+    Given string ABC has permutations in 6
+    forms as ABC, ACB, BAC, BCA, CAB and CBA .
+```
+
+### Example 2:
+```txt
+Input:
+    ABSG
+Output:
+    ABGS ABSG AGBS AGSB ASBG ASGB BAGS
+    BASG BGAS BGSA BSAG BSGA GABS GASB
+    GBAS GBSA GSAB GSBA SABG SAGB SBAG
+    SBGA SGAB SGBA
+Explanation:
+    Given string ABSG has 24 permutations.
+```
+
+
+
+#### Constraints:
+- 1 <= length of string <= 10
+- Expected Time Complexity: O(n! * n)
+- Expected Space Complexity: O(n)"
+backtracking,hard,Printing all solutions in N-Queen Problem,"The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+Given an integer n, return the number distinct solutions to the n-queens puzzle.
+
+
+### Input Format
+
+The first line contains an integer N, denoting the size of the board in NxN format.
+
+### Output Format
+
+Print the number of discrete solutions to the n-queens puzzle.
+
+### Example 1:
+```txt
+Input:
+    1
+Output:
+    1
+Explanation:
+    For 1x1 board there can only be one queen.
+```
+
+### Example 2:
+```txt
+Input:
+    10
+Output:
+    724
+Explanation:
+    For 10x10 board there can be 724 distinct solutions.
+```
+
+#### Constraints:
+- 1 <= n <= 15"
+backtracking,medium,Combinations,"Given two integers n and k, return all possible combinations of k numbers out of the range [1, n].
+
+You may return the answer in any order.
+
+### Input Format
+
+The first line contains 2 integer N and K, where N is the range of the array and K is the number of elements to be picked.
+
+### Output Format
+
+Print all the combinations of K numbers out of the range [1, N]. Print the combinations in different lines.
+
+### Example 1:
+```txt
+Input:
+    4 2
+Output:
+    2 4
+    3 4
+    2 3
+    1 2
+    1 3
+    1 4
+```
+
+### Example 2:
+```txt
+Input:
+    1 1
+Output:
+    1
+```
+
+#### Constraints:
+- 1 <= n <= 20
+- 1 <= k <= n"
+backtracking,hard,Solve the Sudoku,"Write a program to solve the game of sudoku.
+
+A valid sudoku solution must follow these rules:
+1. Each of the digit 1-9 must only occur once in a row and column
+2. Each of the digit 1-9 must only occur once in 3x3 grid
+3. It is guaranteed that the grid size would be 9x9
+
+### Input Format
+
+The input will contain a 9x9 matrix. Each cell will contain only digits 0-9, 0 representing an empty cell.
+
+### Output Format
+
+Print the solved sudoku solution in the form of a 9x9 matrix, replacing 0s with the digits 1-9.
+
+### Example 1:
+```txt
+Input:
+    0 0 4 0 1 0 0 0 0
+    0 0 0 0 0 7 6 8 9
+    0 0 0 0 0 0 1 0 4
+    2 1 5 7 3 4 0 0 6
+    3 0 6 0 0 8 2 7 5
+    0 0 0 2 6 0 0 0 0
+    4 3 2 5 7 1 0 0 0
+    6 0 9 0 0 0 0 0 1
+    8 7 0 0 4 6 0 0 0
+Output:
+    5 6 4 8 1 9 3 2 7
+    1 2 3 4 5 7 6 8 9
+    7 9 8 6 2 3 1 5 4
+    2 1 5 7 3 4 8 9 6
+    3 4 6 1 9 8 2 7 5
+    9 8 7 2 6 5 4 1 3
+    4 3 2 5 7 1 9 6 8
+    6 5 9 3 8 2 7 4 1
+    8 7 1 9 4 6 5 3 2
+```
+
+#### Constraints:
+- 0 represents empty cell
+- 0 <= Board[i] <= 9
+- Expected Complexity: O(9^(n*n))
+- row = col = 9
+- It is guaranteed the solution to a sudoku would be unique"
+binarysearch,hard,Median of two sorted Array,"Given two sorted arrays array1 and array2 of size m and n respectively. Find the median of the two sorted arrays.
+
+### Input Format
+
+The first line contains 2 integers N and M the length of the arrays respectively.
+The second line contains n integers n1, n2, ... the array elements themselves.
+The third line contains m integers m1, m2, ... the array elements themselves.
+
+### Output Format
+
+Print the median of the two sorted arrays.
+
+### Example 1:
+```txt
+Input:
+    3 4
+    1 5 9
+    2 3 6 7
+Output:
+    5
+Explanation:
+    The middle element for {1,2,3,5,6,7,9} is 5
+```
+
+### Example 2:
+```txt
+Input:
+    2 4
+    4 6
+    1 2 3 5
+Output:
+    3.5
+```
+
+
+#### Constraints:
+- 0 ≤ m,n ≤ 10^4
+- 1 ≤ array1[i], array2[i] ≤ 10^5
+- Expected Time Complexity: O(min(log n, log m)).
+- Expected Auxiliary Space: O((n+m)/2)."
+stacks,medium,Merge Overlapping Intervals,"Given a set of  intervals, find the size of its largest possible subset of intervals such that no three intervals in the subset share a common point.
+
+### Input Format
+The first line contains an integer n, denoting the number of intervals in the list.
+Each line  of the  subsequent lines contains two space-separated integers describing the respective starting () and ending () boundaries of an interval.
+
+## Output Format
+print an integer denoting the size of the largest possible subset of intervals in the given set such that no three points in the subset overlap.
+
+### Example 1:
+```txt
+Input:
+    3
+    1 2
+    2 3
+    2 4
+Output:
+    2
+Explanation:
+    For set , all three intervals fall on point  so we can only choose any  of the intervals. Thus, we print  on a new line.
+```"
+stacks,medium,Maximum Rectangular Area in a Histogram,"Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have the same width and the width is 1 unit, there will be N bars height of each bar will be given by the array arr.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a, n denoting the height of each bar.
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the largest rectangular area possible.
+
+### Example 1:
+```txt
+Input:
+    7
+    6 2 5 4 5 1 6
+Output:
+    12
+```
+![""1""](https://cdn.discordapp.com/attachments/882247424809242705/909750396761808936/unknown.png)
+
+### Example 2:
+```txt
+Input:
+    8
+    7 2 8 9 1 3 6 5
+Output:
+    16
+Explanation:
+    Maximum size of the histogram
+    will be 8  and there will be 2 consecutive
+    histogram. And hence the area of the
+    histogram will be 8x2 = 16.
+```
+
+
+
+#### Constraints:
+- 1 ≤ N ≤ 1000000
+- 1 ≤ arr[i] ≤ 1000000000000
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(N)
+"
+stacks,easy,Valid Substring,"Given a string S consisting only of opening and closing parenthesis 'ie '('  and ')', find out the length of the longest valid(well-formed) parentheses substring.
+
+**Note** : Length of the smallest valid substring ( ) is 2.
+
+### Input Format
+
+The first line contains a non-empty string S consisting of only characters '(' , ')'.
+
+### Output Format
+
+Print the length of the longest valid parentheses substring.
+
+### Example 1:
+```txt
+Input:
+    (()(
+Output:
+    2
+Explanation:
+    The longest valid substring is ""()"". Length = 2.
+```
+
+### Example 2:
+```txt
+Input:
+    ()(())(
+Output:
+    6
+Explanation:
+    The longest valid substring is ""()(())"". Length = 6.
+```
+
+
+#### Constraints:
+- 1 <= |S| <= 100000
+- Expected Time Complexity:O(n)
+- Expected Auxiliary Space: O(1)"
+stacks,medium,Next Greater Element,"Given an array arr[ ] of size N having distinct elements, the task is to find the next greater element for each element of the array in order of their appearance in the array.
+
+Next greater element of an element in the array is the nearest element on the right which is greater than the current element.
+If there does not exist next greater of current element, then next greater element for current element is -1. For example, next greater of the last element is always -1.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the list of integers of length N denoting the next greater elements for all the corresponding elements in the input array.
+
+### Example 1:
+```txt
+Input:
+    4
+    1 3 2 4
+Output:
+    3 4 4 -1
+Explanation:
+    In the array, the next larger element to 1 is 3 , 3 is 4 , 2 is 4 and for 4 ? since it doesn't exist, it is -1.
+```
+
+### Example 2:
+```txt
+Input:
+    5
+    6 8 0 1 3
+Output:
+    8 -1 1 3 -1
+Explanation:
+    In the array, the next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1 , for 1 it is 3 and then for 3 there is no larger element on right and hence -1.
+```
+
+
+#### Constraints:
+- 1 ≤ N ≤ 1000000
+- 1 ≤ Ai ≤ 100000000000
+- Expected Time Complexity : O(N)
+- Expected Auxilliary Space : O(N)"
+stacks,medium,Next Smaller Element,"Given an array arr[ ] of size N having elements, the task is to find the next smaller element for each element of the array in order of their appearance in the array.
+
+Next smaller element of an element in the array is the nearest element on the right which is smaller than the current element.
+If there does not exist next smaller of current element, then next smaller element for current element is -1. For example, next smaller of the last element is always -1.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the list of integers of length N denoting the next smaller elements for all the corresponding elements in the input array.
+
+### Example 1:
+```txt
+Input:
+    4
+    1 3 2 4
+Output:
+    -1 2 4 -1
+Explanation:
+    In the array, the next smaller element to 1 is -1 , 3 is 2 , 2 is 4 and for 4 ? since it doesn't exist, it is -1.
+```
+
+### Example 2:
+```txt
+Input:
+    5
+    6 8 0 1 3
+Output:
+    0 0 -1 1 -1
+Explanation:
+    In the array, the next smaller element to 6 is 0, for 8 is 0, for 0 is -1 as it is the smallest, for 1 it is 1 and then for 3 there is no smaller element on right and hence -1.
+```
+
+#### Constraints:
+- 1 ≤ N ≤ 1000000
+- 1 ≤ Ai ≤ 100000000000
+- Expected Time Complexity : O(N)
+- Expected Auxilliary Space : O(N)"
+queues,easy,First negative integer in every window of size k ,"Given an array A[] of size N and a positive integer K, find the first negative integer for each and every window(contiguous subarray) of size K.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+The third line contains an integer K.
+
+### Output Format
+
+Print the the first negative number in every window of size K starting from the first till the end. If a window does not contain a negative integer, then return 0 for that window.
+
+### Example 1:
+```txt
+Input:
+    5
+    -8, 2, 3, -6, 10
+    2
+Output:
+    -8 0 -6 -6
+Explanation:
+    First negative integer for each window of size k
+    {-8, 2} = -8
+    {2, 3} = 0 (does not contain a negative integer)
+    {3, -6} = -6
+    {-6, 10} = -6
+```
+
+### Example 2:
+```txt
+Input:
+    8
+    12 -1 -7 8 -15 30 16 28
+    3
+Output:
+    -1 -1 -7 -15 -15 0
+```
+
+
+#### Constraints:
+- 1 <= N <= 100000
+- 1 <= A[i] <= 100000
+- 1 <= K <= N
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(K)"
+queues,easy,Queue Reversal ,"Given a Queue Q containing N elements. The task is to reverse the N elements of the queue.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the reversed queue of array elements.
+
+### Example 1:
+```txt
+Input:
+    6
+    4 3 1 10 2 6
+Output:
+    6 2 10 1 3 4
+Explanation:
+    After reversing the given
+    elements of the queue , the resultant
+    queue will be 6 2 10 1 3 4.
+```
+
+### Example 2:
+```txt
+Input:
+    4
+    4 3 2 1
+Output:
+    1 2 3 4
+Explanation:
+    After reversing the given
+    elements of the queue , the resultant
+    queue will be 1 2 3 4.
+```
+
+#### Constraints:
+- 1 ≤ N ≤ 100000
+- 1 ≤ elements of Queue ≤ 100000
+- Expected Time Complexity : O(n)
+- Expected Auxilliary Space : O(n)"
+greedy,medium,Container With Most Water,"Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
+
+**Note** : that you may not slant the container.
+
+### Input Format
+
+The first line contains an integer n the length of the original array a
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the max area of the water that can be contained in the container.
+
+### Example 1:
+
+![""1](https://cdn.discordapp.com/attachments/882247424809242705/909760369751379968/unknown.png)
+```txt
+Input:
+    9
+    1 8 6 2 5 4 8 3 7
+Output:
+    49
+Explanation:
+    The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+```
+
+### Example 2:
+```txt
+Input:
+    2
+    1 1
+Output:
+    1
+```
+### Example 3:
+```txt
+Input:
+    5
+    4 3 2 1 4
+Output:
+    16
+```
+### Example 4:
+```txt
+Input:
+    3
+    1 2 1
+Output:
+    2
+```
+
+#### Constraints:
+- n == height.length
+- 2 <= n <= 100000
+- 0 <= height[i] <= 10000"
+queues,medium,Circular tour,"Suppose there is a circle. There are  petrol pumps on that circle. Petrol pumps are numbered  to  (both inclusive). You have two pieces of information corresponding to each of the petrol pump: (1) the amount of petrol that particular petrol pump will give, and (2) the distance from that petrol pump to the next petrol pump.
+
+Initially, you have a tank of infinite capacity carrying no petrol. You can start the tour at any of the petrol pumps. Calculate the first point from where the truck will be able to complete the circle. Consider that the truck will stop at each of the petrol pumps. The truck will move one kilometer for each litre of the petrol.
+
+### Input Format
+
+The first line will contain the value of .
+The next  lines will contain a pair of integers each, i.e. the amount of petrol that petrol pump will give and the distance between that petrol pump and the next petrol pump.
+
+### Output Format
+
+An integer which will be the smallest index of the petrol pump from which we can start the tour.
+
+### Example 1:
+```txt
+Input:
+    3
+    1 5
+    10 3
+    3 4
+Output:
+    1
+Explanation:
+    We can start the tour from the second petrol pump.
+```"
+queues,medium,Maximum of all subarrays of size k ,"Given an array arr[] of size N and an integer K. Find the maximum for each and every contiguous subarray of size K.
+
+### Input Format
+
+The first line contains 2 integers N and K, N being the length of the original array A and K being the size of the sub-array.
+The second line contains n integers a1, a2, ... the array elements themselves.
+
+### Output Format
+
+Print the list of integers denoting the maximum of every contiguous subarray of size K.
+
+### Example 1:
+```txt
+Input:
+    9 3
+    1 2 3 1 4 5 2 3 6
+Output:
+    3 3 4 5 5 5 6
+Explanation:
+    1st contiguous subarray = {1 2 3} Max = 3
+    2nd contiguous subarray = {2 3 1} Max = 3
+    3rd contiguous subarray = {3 1 4} Max = 4
+    4th contiguous subarray = {1 4 5} Max = 5
+    5th contiguous subarray = {4 5 2} Max = 5
+    6th contiguous subarray = {5 2 3} Max = 5
+    7th contiguous subarray = {2 3 6} Max = 6
+```
+
+### Example 2:
+```txt
+Input:
+    10 4
+    8 5 10 7 9 4 15 12 90 13
+Output:
+    10 10 10 15 15 90 90
+Explanation:
+    1st contiguous subarray = {8 5 10 7}, Max = 10
+    2nd contiguous subarray = {5 10 7 9}, Max = 10
+    3rd contiguous subarray = {10 7 9 4}, Max = 10
+    4th contiguous subarray = {7 9 4 15}, Max = 15
+    5th contiguous subarray = {9 4 15 12}, Max = 15
+    6th contiguous subarray = {4 15 12 90}, Max = 90
+    7th contiguous subarray = {15 12 90 13}, Max = 90
+```
+
+
+
+#### Constraints:
+- 1 ≤ N ≤ 10000000
+- 1 ≤ K ≤ N
+- 0 ≤ arr[i] ≤ 10000000
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(K)"
+binarysearch,easy,Binary Search,"Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+
+You must write an algorithm with O(log n) runtime complexity.
+
+### Input Format
+
+First line contains N Q, number of elements in the array and the target number.
+Second line contains N numbers, elements of the array.
+
+### Output Format
+
+Print the index of the target number if it exists. Otherwise, print -1.
+
+### Example 1
+
+```txt
+Input:
+    6 9
+    -1 0 3 5 9 12
+Output:
+    4
+Explanation:
+    Explanation: 9 exists in nums and its index is 4
+```
+
+### Example 2
+
+```txt
+Input:
+    6 2
+    -1 0 3 5 9 12
+Output:
+    -1
+Explanation:
+    2 does not exist in nums so return -1
+```
+
+#### Constraints
+
+- 1 <= nums.length <= 10000
+- -10000 < nums[i], target < 10000
+- All the integers in nums are unique, nums is sorted in ascending order."
+binarysearch,easy,Find first and last positions of an element in a sorted array,"Given a sorted array with possibly duplicate elements, the task is to find indexes of first and last occurrences of an element x in the given array.
+
+### Input Format
+
+The first line should consist of two space separated integers, The size of the array N and X.
+The second line consist of N space separated integers.
+
+### Output Format
+
+Output should contain two space separated integers, the index of first and last occurence of element X.
+
+### Example 1
+
+```txt
+Input:
+    9 5
+    1 3 5 5 5 5 67 123 125
+Output:
+    2 5
+```
+
+### Example 2
+
+```txt
+Input:
+    9 7
+   1 3 5 5 5 5 7 123 125
+Output:
+    6 6
+```
+
+#### Constraints
+
+- 1 ≤ N ≤ 107
+- Expected Time Complexity: O(logN)
+- Expected Auxiliary Space: O(1)."
+binarysearch,easy,Rotation Count in Rotated Sorted array,"Given an ascending sorted rotated array Arr of distinct integers of size N. The array is right rotated K times. Find the value of K.
+
+### Input Format
+
+The first line consist of an Integer N, size of the array.
+The second line of N space separated integers.
+
+### Output Format
+
+Output should contain a single integer, K.
+
+### Example 1
+
+```txt
+Input:
+    5
+    5 1 2 3 4
+Output:
+    1
+Explanation:
+    The given array is 5 1 2 3 4. The original sorted array is 1 2 3 4 5. We can see that the array was rotated 1 times to the right.
+```
+
+### Example 2
+
+```txt
+Input:
+    5
+    1 2 3 4 5
+Output:
+    0
+Explanation:
+    The given array is not rotated.
+```
+
+#### Constraints
+
+- 1 <= N <=105
+- 1 <= Arri <= 107
+- Expected Time Complexity: O(log(N))
+- Expected Auxiliary Space: O(1)"
+binarysearch,easy,Find Pair Given Difference,"Given an array Arr[] of size L and a number N, you need to write a program to find if there exists a pair of elements in the array whose difference is N.
+
+### Input Format
+
+The first line of input consist of two space separated integers. L and N.
+The second line of input consist of L space separated integers.
+
+### Output Format
+
+Output should consist of a single integer, either 0 or 1. 1 if exists and 0 if doesn't.
+
+### Example 1
+
+```txt
+Input:
+    6 78
+    5 20 3 2 5 80
+Output:
+    1
+Explanation:
+    Explanation: (2, 80) have difference of 78.
+```
+
+### Example 2
+
+```txt
+Input:
+    5 45
+    90 70 20 80 50
+Output:
+    0
+Explanation:
+    There is no pair with difference of 45.
+```
+
+#### Constraints
+
+- 1 ≤ L ≤ 104
+* 1 ≤ Arr[i], N ≤ 105
+* Expected Time Complexity: O(L* Log(L)).
+* Expected Auxiliary Space: O(1)."
+binarysearch,easy,Search in Rotated Sorted Array,"There is an integer array nums sorted in ascending order (with distinct values). Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+
+Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+
+You must write an algorithm with O(log n) runtime complexity.
+
+### Input Format
+
+The first line should consist of two space separated integers, The size of Array(N) and Integer Target.
+The second line should consist of N space separated integers.
+
+### Output Format
+
+The output should consist of a single integer, the index of target if it is in nums, or -1 if it is not in nums.
+
+### Example 1
+
+```txt
+Input:
+    7 0
+    4 5 6 7 0 1 2
+Output:
+    4
+```
+
+### Example 2
+
+```txt
+Input:
+    7 3
+    4 5 6 7 0 1 2
+Output:
+    -1
+```
+
+### Example 3
+
+```txt
+Input:
+    1 0
+    1
+Output:
+    -1
+```
+
+#### Constraints
+
+- 1 <= nums.length <= 5000
+- -104 <= nums[i] <= 104
+- All values of nums are unique, nums is an ascending array that is possibly rotated.
+- -104 <= target <= 104"
+binarysearch,medium,Capacity To Ship Packages Within D Days,"Given an array arr[] of N weights. Find the least weight capacity of a boat to ship all weights within D days.
+
+**Note** : You have to load weights on the ship in the given order.
+
+### Input Format
+
+The first line should consist of two space separated integers N and D.
+The second line should consist of N space separated integers.
+
+### Output Format
+
+The output should consist a single integer, the least weight capacity of a boat to ship all weights within D days.
+
+### Example 1
+
+```txt
+Input:
+    3 2
+    1 2 1
+Output:
+    3
+Explanation:
+    We can ship the weights in 2 days in the following way:-
+    Day 1- 1,2
+    Day 2- 1
+```
+
+### Example 2
+
+```txt
+Input:
+    3 3
+    9 8 10
+Output:
+    10
+Explanation:
+    We can ship the weights in 3 days in the following way:-
+    Day 1- 9
+    Day 2- 8
+    Day 3- 10
+```
+
+#### Constraints
+
+- 1 ≤ D ≤ N ≤ 105
+- 1 ≤ arr[i] ≤ 500
+- Expected Time Complexity: O(N\*log(Sum of weights - max(list of weights))
+- Expected Auxiliary Space: O(1)"
+maths,medium,Reverse Integer,"Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+
+### Input Format
+
+Input consist of a single line, a signed 32-bit integer x.
+
+### Output Format
+
+Output should consist a single integer. Integer x with it's digits reversed, or 0 if above condition fails.
+
+### Example 1
+
+```txt
+Input:
+    123
+Output:
+    321
+```
+
+### Example 2
+
+```txt
+Input:
+    -123
+Output:
+    -321
+```
+
+### Example 3
+
+```txt
+Input:
+    120
+Output:
+    21
+```
+
+### Example 4
+
+```txt
+Input:
+    0
+Output:
+    0
+```
+
+#### Constraints
+
+- -10000000000 <= x <= 1000000000"
+maths,medium,Minimum Moves to Equal Array Elements,"Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+
+In one move, you can increment n - 1 elements of the array by 1.
+
+### Input Format
+
+The first line of input consist of an integer n.
+The second line of input consist n space separated integers.
+
+### Output Format
+
+The output should be of a single line, the minimum number of moves required to make all array elements equal.
+
+### Example 1
+
+```txt
+Input:
+    3
+    1 2 3
+Output:
+    3
+Explanation:
+    Only three moves are needed (remember each move increments two elements):
+    [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
+```
+
+### Example 2
+
+```txt
+Input:
+    3
+    1 1 1
+Output:
+    0
+```
+
+#### Constraints
+
+* n == nums.length
+* 1 <= nums.length <= 100000
+* -1000000000 <= nums[i] <= 1000000000
+* The answer is guaranteed to fit in a 32-bit integer."
+maths,hard,Permutation Sequence,"The set [1, 2, 3, ..., n] contains a total of n! unique permutations.
+
+By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+
+1. ""123""
+2. ""132""
+3. ""213""
+4. ""231""
+5. ""312""
+6. ""321""
+
+Given n and k, return the kth permutation sequence.
+
+### Input Format
+
+The input should consist of two space separated integers, n and k.
+
+### Output Format
+
+Output should consist of a single line, the kth permutation sequence.
+
+### Example 1:
+
+```txt
+Input:
+    3 3
+Output:
+    213
+```
+
+### Example 2:
+
+```txt
+Input:
+    4 9
+Output:
+    2314
+```
+
+### Example 3:
+
+```txt
+Input:
+    3 1
+Output:
+    123
+```
+
+#### Constraints:
+
+- 1 <= n <= 9
+- 1 <= k <= n!
+"
+maths,easy,Excel Sheet Column Title,"Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.
+
+For example:
+```
+A -> 1
+B -> 2
+C -> 3
+-----------
+Z -> 26
+AA -> 27
+AB -> 28
+```
+
+### Input Format
+
+The only input line consist of a single Integer.
+
+### Output Format
+
+The only input line shoud consist of a single string containing the corresponding the Column Title.
+
+### Example 1:
+
+```txt
+Input:
+    1
+Output:
+    A
+```
+
+### Example 2:
+
+```txt
+Input:
+    28
+Output:
+    AB
+```
+
+### Example 3:
+
+```txt
+Input:
+    701
+Output:
+    ZY
+```
+
+### Example 4:
+
+```txt
+Input:
+    2147483647
+Output:
+    FXSHRXW
+```
+
+#### Constraints:
+
+- 1 <= columnNumber <= 2<sup>31</sup> - 1"
+dynamicprogramming,medium,Coin Change,"Given an amount and the denominations of coins available, determine how many ways change can be made for amount. There is a limitless supply of each coin type.
+
+Example:
+n = 3
+c = [8, 3, 1, 2]
+There are 3 ways to make change for n = 3:{1,1,1}, {1,2}, and {3}.
+
+### Input Format
+
+The first line contains two space-separated integers n and m, where:
+n is the amount to change
+m is the number of coin types
+The second line contains m space-separated integers that describe the values of each coin type.
+
+### Output Format
+
+Print an integer denoting the number of ways to make change for amount n using coins having the given values.
+
+### Example 1:
+```txt
+Input:
+    4 3
+    1 2 3
+Output:
+    4
+Explanation:
+    There are four ways to make change for n = 4 using coins with values given by
+    C = [1,2,3]
+        1.{1,1,1,1}
+        2.{1,2,1}
+        3.{2,2}
+        4.{1,3}
+```
+
+### Example 2:
+```txt
+Input:
+    10 4
+    2 5 3 6
+Output:
+    5
+Explanation:
+    There are five ways to make change for n = 10 units using coins with values given by
+    C = [2,5,3,6]
+        1.{2,2,2,2,2}
+        2.{2,2,3,3}
+        3.{2,2,6}
+        4.{2,3,5}
+        5.{5,5}
+```
+
+
+#### Constraints:
+- 1<= C[i]<= 50
+- 1<= n <= 250
+- 1<=m<=50
+- Each  is guaranteed to be distinct.
+"
+dynamicprogramming,medium,nCr,"Given two integers n and r, find nCr. Since the answer may be very large, calculate the answer modulo 10^9^+7.
+
+### Input Format
+
+Input consist of a single line, having two space separated integers, n and r.
+
+### Output Format
+
+Output should consist of a single line, the nCr value obtained.
+
+### Example 1
+
+```txt
+Input:
+    3 2
+Output:
+    3
+Explanation:
+    3C2 = 3
+```
+
+### Example 2
+
+```txt
+Input:
+    2 4
+Output:
+    0
+Explanation:
+    r is greater than n.
+```
+
+#### Constraints
+
+- 1 ≤ n ≤ 1000
+- 1 ≤ r ≤ 800
+- Expected Time Complexity: O(n*r)
+- Expected Auxiliary Space: O(r)
+"
+dynamicprogramming,hard,Matrix Chain Multiplication,"Given a sequence of matrices, find the most efficient way to multiply these matrices together. The efficient way is the one that involves the least number of multiplications.
+
+The dimensions of the matrices are given in an array arr[] of size N (such that N = number of matrices + 1) where the ith matrix has the dimensions (arr[i-1] x arr[i]).
+
+### Input Format
+
+First line consist a single integer N.
+Second line consist of N space separated integers.
+
+### Output Format
+
+Output consist of a single line, The minimum number of multiplications.
+
+### Example 1
+
+```txt
+Input:
+    5
+    40 20 30 10 30
+Output:
+    26000
+Explanation:
+    There are 4 matrices of dimensions 40x20, 20x30, 30x10 and 10x30.
+    Let the input 4 matrices be A, B, C and D.  The minimum number of
+    multiplications are obtained by putting parenthesis in following way:
+    (A(BC))D --> 20*30*10 + 40*20*10 + 40*10*30
+
+```
+
+### Example 2
+
+```txt
+Input:
+    5
+    10 20 30 40 30
+Output:
+    30000
+Explanation:
+    There are 4 matrices of dimensions 10x20, 20x30, 30x40 and 40x30.
+    Let the input 4 matrices be A, B, C and D.  The minimum number of
+    multiplications are obtained by putting parenthesis in following way
+    ((AB)C)D --> 10*20*30 + 10*30*40 + 10*40*30
+```
+
+#### Constraints
+
+- 2 ≤ N ≤ 100
+- 1 ≤ arr[i] ≤ 500
+- Expected Time Complexity: O(N3)
+- Expected Auxiliary Space: O(N2)
+"
+dynamicprogramming,medium,Edit Distance,"Given two strings S and T. Return the minimum number of operations required to convert S to T.
+The possible operations are permitted:
+
+1. Insert a character at any position of the string.
+2. Remove any character from the string.
+3. Replace any character from the string with any other character.
+
+### Input Format
+
+First line consist of first string S
+Second line consist of second string T.
+
+### Output Format
+
+Output consist of a single line, The number of operations  required to convert S to T.
+
+### Example 1:
+
+```txt
+    geek
+    gesek
+Output:
+    1
+Explanation:
+    One operation is required
+    inserting 's' between two 'e's of str1.
+```
+
+### Example 2:
+
+```txt
+Input :
+    gfg
+    gfg
+Output:
+    0
+Explanation:
+    Both strings are same.
+```
+
+
+#### Constraints:
+
+- 1 ≤ Length of both strings ≤ 100
+- Expected Time Complexity: O(|s|*|t|)
+- Expected Space Complexity: O(|s|*|t|)
+"
+dynamicprogramming,medium,Partition Equal Subset Sum,"Given an array arr[] of size N, check if it can be partitioned into two parts such that the sum of elements in both parts is the same.
+
+### Input Format
+
+First line consist of the size of Array N.
+Second line should consist of N space separated integers.
+
+### Output Format
+
+Output consist of a single line, Either Print ""YES"" or ""NO"" without Quotation Marks.
+
+### Example 1:
+
+```txt
+Input:
+    4
+    1 5 11 5
+Output:
+    YES
+Explanation:
+    The two parts are {1, 5, 5} and {11}.
+```
+
+### Example 2:
+
+```txt
+Input:
+    3
+    1 3 5
+Output:
+    NO
+Explanation:
+    This array can never be partitioned into two such parts.
+```
+
+#### Constraints:
+
+- 1 ≤ N ≤ 100
+- 1 ≤ arr[i] ≤ 1000
+- Expected Time Complexity: O(N\*sum of elements)
+- Expected Auxiliary Space: O(N\*sum of elements)"
+dynamicprogramming,easy,Friends Pairing Problem,"Given N friends, each one can remain single or can be paired up with some other friend. Each friend can be paired only once. Find out the total number of ways in which friends can remain single or can be paired up.
+
+**Note** : Since answer can be very large, return your answer mod 10^9+7.
+
+### Input Format
+
+Input consist of a single line, N.
+
+### Output Format
+
+Output should consist of a single line, the total number of ways in which friends can remain single or can be paired up.
+
+### Example 1:
+
+```txt
+Input:
+    3
+Output:
+    4
+Explanation:
+    {1}, {2}, {3} : All single
+    {1}, {2,3} : 2 and 3 paired but 1 is single.
+    {1,2}, {3} : 1 and 2 are paired but 3 is single.
+    {1,3}, {2} : 1 and 3 are paired but 2 is single.
+    Note that {1,2} and {2,1} are considered same.
+```
+
+### Example 2:
+
+```txt
+Input:
+    2
+Output:
+    2
+Explanation:
+    {1} , {2} : All single.
+    {1,2} : 1 and 2 are paired.
+```
+
+#### Constraints:
+
+- 1 ≤ N ≤ 104
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(1)
+"
+dynamicprogramming,medium,Longest Common Subsequence,"Given two sequences, find the length of longest subsequence present in both of them. Both the strings are of uppercase.
+
+### Input Format
+
+Input Consists of three lines,
+
+First line consists of two space separated Integers, Length of First String and Second String.
+Second Line should consist of **First String**
+Third Line should consist of **Second String**
+
+### Output Format
+
+Output should consist of a single line, The Length of Longest Subsequence present in both of them.
+
+### Example 1:
+
+```txt
+Input:
+    6 6
+    ABCDGH
+    AEDFHR
+Output:
+    9
+Explanation:
+    LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3
+```
+
+### Example 2:
+
+```txt
+Input:
+    2 2
+    ABC
+    AC
+Output:
+    2
+Explanation:
+    LCS of ""ABC"" and ""AC"" is ""AC"" of length 2.
+```
+
+
+#### Constraints:
+
+- 1<=size(str1),size(str2)<=103
+- Expected Time Complexity : O(|str1|*|str2|)
+- Expected Auxiliary Space: O(|str1|*|str2|)"
+dynamicprogramming,medium,LCS of three strings,"Given 3 strings A, B and C, the task is to find the longest common sub-sequence in all three given sequences.
+
+### Input Format
+
+Input consists of three lines, each line consisting of String A, B and C respectively.
+
+### Output Format
+
+Output should consist of a single Line, The **Length** of the longest common sub-sequence.
+
+### Example 1
+
+```txt
+Input:
+    geeks
+    geeksfor
+    geeksforgeeks
+Output:
+    5
+Explanation:
+    ""geeks""is the longest common subsequence with length 5.
+```
+
+### Example 2
+
+```txt
+Input:
+    abcd
+    efgh
+    ijkl
+Output:
+    0
+Explanation:
+    There's no common subsequence in all the strings.
+```
+
+#### Constraints:
+
+- 1<=n1, n2, n3<=20
+- Expected Time Complexity: O(n1*n2*n3).
+- Expected Auxiliary Space: O(n1*n2*n3)."
+dynamicprogramming,medium,Count total set bits,"You are given a number N. Find the total count of set bits for all numbers from 1 to N(both inclusive).
+
+### Input Format
+
+Input consists of a single line, N.
+
+### Output Format
+
+Output should consist of a single line, the **Total Count of set Bits** for all Numbers from 1 to N.
+
+### Example 1:
+
+```txt
+Input:
+    4
+Output:
+    5
+Explanation:
+    For numbers from 1 to 4.
+    For 1: 0 0 1 = 1 set bits
+    For 2: 0 1 0 = 1 set bits
+    For 3: 0 1 1 = 2 set bits
+    For 4: 1 0 0 = 1 set bits
+    Therefore, the total set bits is 5.
+```
+
+### Example 2:
+```txt
+Input:
+    17
+Output:
+    35
+Explanation:
+    From numbers 1 to 17(both inclusive), the total number of set bits is 35.
+```
+
+
+#### Constraints:
+- 1 ≤ N ≤ 108
+- Expected Time Complexity: O(log N).
+- Expected Auxiliary Space: O(1).
+"
+dynamicprogramming,medium,Mobile numeric keypad,"Given the mobile numeric keypad. You can only press buttons that are up, left, right, or down to the current button. You are not allowed to press bottom row corner buttons (i.e. * and # ). Given a number N, the task is to find out the number of possible numbers of the given length.
+
+### Input Format
+Input Consists of a Single Line, N
+### Output Format
+
+Output consists of a single line, where you need to print the number of possible numbers of the given length.
+
+### Example 1:
+
+```txt
+Input:
+    1
+Output:
+    10
+Explanation:
+    Number of possible numbers would be 10 (0, 1, 2, 3, …., 9)
+```
+
+### Example 2:
+
+```txt
+Input:
+    2
+Output:
+    36
+Explanation:
+    Possible numbers: 00, 08, 11,
+    12, 14, 22, 21, 23, 25 and so on.
+    If we start with 0, valid numbers will be 00, 08 (count: 2)
+    If we start with 1, valid numbers will be 11, 12, 14 (count: 3)If we start with 2, valid numbers will be 22, 21, 23,25 (count: 4)
+    If we start with 3, valid numbers will be 33, 32, 36 (count: 3)
+    If we start with 4, valid numbers will be 44,41,45,47 (count: 4)
+    If we start with 5, valid numbers will be 55,54,52,56,58 (count: 5) and so on..
+```
+
+
+#### Constraints:
+
+- 1 ≤ N ≤ 25
+- Expected Time Complexity: O(N)
+- Expected Auxiliary Space: O(N)
+"
